@@ -25,37 +25,46 @@ def question2():
     return answerDiscount, answerNoise
 
 def question3a():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    # pref close exit (+1), risk cliff (-10)
+    # make risky path more attractive than safe path
+    # with very low discount, agent prefs immediate rewards
+    answerDiscount = 0.1
+    answerNoise = 0.0
+    answerLivingReward = 0.0
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3b():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    # low discount to pref +1 over +10, moderate noise to avoid cliff, moderate negative living reward
+    answerDiscount = 0.3
+    answerNoise = 0.2
+    answerLivingReward = -0.5
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3c():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    # pref distant exit (+10), risk cliff (-10)
+    answerDiscount = 0.9
+    answerNoise = 0.0
+    answerLivingReward = 0.0
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3d():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    # pref distant exit (+10), avoid cliff (-10)
+    # high discount to pref +10 over +1, noise to avoid cliff
+    answerDiscount = 0.9
+    answerNoise = 0.2
+    answerLivingReward = 0.0
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
 def question3e():
-    answerDiscount = None
-    answerNoise = None
-    answerLivingReward = None
+    # avoid both exits + cliff (never terminate)
+    # staying alive > reaching any terminal state
+    answerDiscount = 0.9
+    answerNoise = 0.0
+    answerLivingReward = 1.0
     return answerDiscount, answerNoise, answerLivingReward
     # If not possible, return 'NOT POSSIBLE'
 
